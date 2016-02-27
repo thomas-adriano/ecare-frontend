@@ -30,7 +30,7 @@ Aprendam Angular:
 2. Execute o comando "npm install";
 
 #### executados toda a vez que você comecar a programar
-3. Após o termino do passo 2, ainda no mesmo prompt de comando (ou em um novo, mas deve estar ainda no mesmo diretorio raiz do projeto) execute o comando "grunt browserSync";
+3. Após o termino do passo 3 anterior, ainda no mesmo prompt de comando (ou em um novo, mas deve estar ainda no mesmo diretorio raiz do projeto) execute o comando "grunt browserSync";
   * Este comando serve para inicializar a tarefa de livereload. Com este plugin ativo, todas as alterações feitas nos arquivos e recursos irão ser automaticamente atualizadas no browser;
 4. Abra um novo cmd, navegue até o diretorio root do projeto e execute o comando "grunt" (é, só isso.);
   * Isso irá inicializar o processo compilação dos js e scss a cada alteração dos arquivos;

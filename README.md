@@ -25,7 +25,7 @@ Aprendam Angular:
 
 ### Inicializando ambiente de desenvolvimento:
 #### executados apenas uma vez
-0. Instale o grunt-cli (se ainda nao tiver) com o comando (a partir de qualquer diretorio) npm install -g grunt-cli. Isso irá habilitar o grunt para ser executado a partir da linha de comando;
+0. Instale o grunt-cli (se ainda nao tiver) com o comando (a partir de qualquer diretorio) "npm install -g grunt-cli". Isso irá habilitar o grunt para ser executado a partir da linha de comando;
 1. Abra o prompt de comando (CMD) (se ja estiver aberto, reinicie) e navegue (cd) até o diretorio root  deste projeto (o que possui o arquivo index.html);
 2. Execute o comando "npm install";
 

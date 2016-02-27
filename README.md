@@ -2,7 +2,6 @@ PARA UMA MELHOR EXPERIENCIA, LEIA ESTE DOCUMENTO COM UM LEITOR DE MARKDOWN (o ma
 
 ### ANATOMIA DO PROJETO
 * Dist: local onde todos os fontes compilados residem. Equivalente a pasta Bin no mundo java-eclipse;
-* Directives: local onde todas as diretivas (angular) comuns serão armazenadas;
 * Partials: Local onde cada componente do projeto é armazenado. Segue o padrão [...]/partials/%nome_do_componente%/%elementos_que_o_compoem%. Entenda que cada componente deve possuir sua view (html), controller (js), estilo (scss), servicos (js) e diretivas (js) sob o mesmo diretorio do componente em sí.
 * node_modules: Pasta onde todos os modulos instalados através do Node Package Manager (npm) com o comando "npm install --save / --save-dev %nome_do_pacote%" são armazenados.
 * Grundfile.js: Arquivo de definição do task manager Grunt (explicado abaixo);
@@ -30,7 +29,7 @@ Aprendam Angular:
 1. Abra o prompt de comando (CMD) (se ja estiver aberto, reinicie) e navegue (cd) até o diretorio root  deste projeto (o que possui o arquivo index.html);
 2. Execute o comando "npm install";
 
-#### executados quando você comecar a programar
+#### executados toda a vez que você comecar a programar
 3. Após o termino do passo 2, ainda no mesmo prompt de comando (ou em um novo, mas deve estar ainda no mesmo diretorio raiz do projeto) execute o comando "grunt browserSync";
   * Este comando serve para inicializar a tarefa de livereload. Com este plugin ativo, todas as alterações feitas nos arquivos e recursos irão ser automaticamente atualizadas no browser;
 4. Abra um novo cmd, navegue até o diretorio root do projeto e execute o comando "grunt" (é, só isso.);

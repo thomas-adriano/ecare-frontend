@@ -26,11 +26,12 @@ Aprendam Angular:
 ### Inicializando ambiente de desenvolvimento:
 #### executados apenas uma vez
 0. Instale o grunt-cli (se ainda nao tiver) com o comando (a partir de qualquer diretorio) "npm install -g grunt-cli". Isso irá habilitar o grunt para ser executado a partir da linha de comando;
-1. Abra o prompt de comando (CMD) (se ja estiver aberto, reinicie) e navegue (cd) até o diretorio root  deste projeto (o que possui o arquivo index.html);
-2. Execute o comando "npm install";
+0. Abra o prompt de comando (CMD) (se ja estiver aberto, reinicie) e navegue (cd) até o diretorio root  deste projeto (o que possui o arquivo index.html);
+0. Execute o comando "npm install";
 
 #### executados toda a vez que você comecar a programar
-3. Após o termino do passo 3 anterior, ainda no mesmo prompt de comando (ou em um novo, mas deve estar ainda no mesmo diretorio raiz do projeto) execute o comando "grunt browserSync";
+0. Após o termino do passo 3 anterior, ainda no mesmo prompt de comando (ou em um novo, mas deve estar ainda no mesmo diretorio raiz do projeto) execute o comando "grunt browserSync";
   * Este comando serve para inicializar a tarefa de livereload. Com este plugin ativo, todas as alterações feitas nos arquivos e recursos irão ser automaticamente atualizadas no browser;
-4. Deixe o processo iniciado no passo anterior executando e abra um novo cmd, navegue até o diretorio root do projeto e execute o comando "grunt" (é, só isso.);
+0. Deixe o processo iniciado no passo anterior executando e abra um novo cmd, navegue até o diretorio root do projeto e execute o comando "grunt" (é, só isso.);
   * Isso irá inicializar o processo compilação dos js e scss a cada alteração dos arquivos;
+0. PROGRAME THE HELL OUT OF IT!! 

@@ -10,7 +10,10 @@ Aprendam Angular:
   * Entendam (mesmo) o conceito de desenvolvimento MVC e enxerguem ele no Angular. [Site exemplo. Revirem os fontes. ;D](http://todomvc.com/examples/angularjs/#/);
   * Enxergando claramente o conceito MVC no angular, entenda a [injecao de dependencias](https://docs.angularjs.org/guide/di);
   * Opcionalmente: [Aprendam serviços](https://docs.angularjs.org/guide/services). [Aprendam Diretivas](https://docs.angularjs.org/guide/directive), [Aprendam ui-router](https://github.com/angular-ui/ui-router/wiki);
-  * Aprendam Bootstrap: conceito basico de [grid](http://getbootstrap.com/css/#grid), [componentes](http://getbootstrap.com/components/);
+
+Aprendam Bootstrap: 
+ * Conceito basico de [grid](http://getbootstrap.com/css/#grid);
+ * [Componentes](http://getbootstrap.com/components/);
 
 ### Ferramentas & Frameworks utilizados
 * [Grunt](http://gruntjs.com/): Executor de tarefas (tipo o ANT no java);

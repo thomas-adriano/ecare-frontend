@@ -1,7 +1,3 @@
-IGNORE ESTE AVISO SE VOCE ESTÁ LENDO ESTE README VIA GITHUB
-AVISO:
-PARA UMA MELHOR EXPERIENCIA, LEIA ESTE DOCUMENTO COM UM LEITOR DE MARKDOWN (o mais recomendado é ter este suporte, geralmente via plugin, diretamente no editor de texto utilizado para programar. MAS, se nao tiver, use online mesmo: http://dillinger.io/);
-
 ### ANATOMIA DO PROJETO
 * Dist: local onde todos os fontes compilados residem. Equivalente a pasta Bin no mundo java-eclipse;
 * Partials: Local onde cada componente do projeto é armazenado. Segue o padrão [...]/partials/%nome_do_componente%/%elementos_que_o_compoem%. Entenda que cada componente deve possuir sua view (html), controller (js), estilo (scss), servicos (js) e diretivas (js) sob o mesmo diretorio do componente em sí.

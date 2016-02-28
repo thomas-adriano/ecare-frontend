@@ -1,3 +1,5 @@
+IGNORE ESTE AVISO SE VOCE ESTÁ LENDO ESTE README VIA GITHUB
+AVISO:
 PARA UMA MELHOR EXPERIENCIA, LEIA ESTE DOCUMENTO COM UM LEITOR DE MARKDOWN (o mais recomendado é ter este suporte, geralmente via plugin, diretamente no editor de texto utilizado para programar. MAS, se nao tiver, use online mesmo: http://dillinger.io/);
 
 ### ANATOMIA DO PROJETO

@@ -1,5 +1,5 @@
 ### ANATOMIA DO PROJETO
-* Dist: local onde todos os fontes compilados residem. Equivalente a pasta Bin no mundo java-eclipse;
+* Dist: local onde todos os fontes transpilados residem. Equivalente a pasta Bin no mundo java-eclipse;
 * Partials: Local onde cada componente do projeto é armazenado. Segue o padrão [...]/partials/%nome_do_componente%/%elementos_que_o_compoem%. Entenda que cada componente deve possuir sua view (html), controller (js), estilo (scss), servicos (js) e diretivas (js) sob o mesmo diretorio do componente em sí.
 * node_modules: Pasta onde todos os modulos instalados através do Node Package Manager (npm) com o comando "npm install --save / --save-dev %nome_do_pacote%" são armazenados.
 * Grundfile.js: Arquivo de definição do task manager Grunt (explicado abaixo);

@@ -2,8 +2,8 @@ var app = require('app');
 
 var loginCtrl = app.controller('loginCtrl', ['$scope', 'loginService', 'appService', function($scope, loginService, appService) {
 
-  $scope.testBackendConnectivity = function() {
-    appService.testBackendConnectivity();
+  $scope.logIn = function(user) {
+    loginService.logIn(user);
   }
 
 }]);

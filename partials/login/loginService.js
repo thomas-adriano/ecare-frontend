@@ -1,16 +1,17 @@
 var app = require('app');
 
-var service = app.factory('loginService', ['$resource', function($resource) {
+var service = app.factory('loginService', ['$resource', '$state', function($resource, $state) {
   return {
     logIn : function() {
-      var login = $resource('/account/login');
-      login.get({}, function(response) {
-        console.log('success!');
-        console.log(JSON.stringify(response))
-      }, function(response) {
-        console.log('error')
-        console.log(JSON.stringify(response))
-      });
+      $state.go('doctor');
+      // var login = $resource('/account/login');
+      // login.get({}, function(response) {
+      //   console.log('success!');
+      //   console.log(JSON.stringify(response))
+      // }, function(response) {
+      //   console.log('error')
+      //   console.log(JSON.stringify(response))
+      // });
     }
   }
 

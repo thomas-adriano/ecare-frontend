@@ -1,9 +1,24 @@
-.login-screen {
+@import "../app/_utils";
 
-  display: block;
+.ec-login-page {
   position: relative;
-  width: 100%;
-  height: 100%;
-  bottom: auto;
 
+  .ec-login-form {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+  }
+  .ec-login-item {
+    margin-bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  #ec-login-button {
+    position: absolute;
+    width: 66.66%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }

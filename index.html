@@ -2,13 +2,19 @@
 <html ng-app="app">
 <head>
   <meta charset="utf-8">
-  <title></title>
-  <link rel="stylesheet" href="dist/css/app.min.css" charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>e-care</title>
+  <link rel="stylesheet" href="dist/css/app.css" charset="utf-8">
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" charset="utf-8">
+  <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" media="screen" title="no title" charset="utf-8">
 </head>
-<body>
-  <div ui-view="login"></div>
-  <div ui-view="doctor"></div>
-  <div ui-view="patient"></div>
+<body class="application">
+
+  <div class="container-fluid">
+    <div ui-view="login"></div>
+    <div ui-view="doctor"></div>
+    <div ui-view="patient"></div>
+  </div>
 
   <script src="dist/js/module.js" charset="utf-8"></script>
 </body>

@@ -1,6 +1,10 @@
 var angular = require('angular');
 require('angular-ui-router');
 require('angular-resource');
+global.jQuery = require('jquery');
+global.$ = global.jQuery;
+var bootsrtap = require('bootstrap');
+// require('bootstrap-sass');
 
 var app = angular.module('app', ['ui.router', 'ngResource']);
 

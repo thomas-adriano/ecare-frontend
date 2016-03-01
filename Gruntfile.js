@@ -16,12 +16,24 @@ module.exports = function(grunt) {
     return dest;
   }
 
-  var srcFiles = ['partials/**/*.js', 'directives/**/*.js'];
+  var jsFiles = ['partials/**/*.js', 'directives/**/*.js'];
   var scssFiles = loadFiles('partials/', function(f) {return f.endsWith('.scss')});
   var cssDist = './dist/css/';
   var staticFiles = ['./dist/**/*.*', './index.html', './partials/**/*.html'];
 
   grunt.initConfig({
+    browserSync: {
+      bsFiles: {
+        src : staticFiles
+      },
+      options: {
+        injectChanges: false,
+        atBegin: true,
+        server: {
+          baseDir: "./"
+        }
+      }
+    },
     browserify: {
       options: {
         alias: {
@@ -30,7 +42,7 @@ module.exports = function(grunt) {
       },
       dist: {
         files: {
-          'dist/js/module.js':  srcFiles
+          'dist/js/module.js':  jsFiles
         }
       }
     },
@@ -45,6 +57,7 @@ module.exports = function(grunt) {
         }]
       }
     },
+    clean: ["dist/css/"] ,
     concat: {
       options: {
         separator: ';',
@@ -54,22 +67,27 @@ module.exports = function(grunt) {
         dest: 'dist/css/app.css',
       },
     },
-    cssmin: {
-      target: {
-        files: {
-          'dist/css/app.min.css': ['dist/css/app.css']
-        }
-      }
-    },
-    browserSync: {
-      bsFiles: {
-        src : staticFiles
-      },
+    postcss: {
       options: {
-        atBegin: true,
-        server: {
-          baseDir: "./"
-        }
+        processors: [
+          require('autoprefixer')({
+            browsers: /* retrocompatibilidade do bootstrap */[
+              "Android 2.3",
+              "Android >= 4",
+              "Chrome >= 20",
+              "Firefox >= 24",
+              "Explorer >= 8",
+              "iOS >= 6",
+              "Opera >= 12",
+              "Safari >= 6"
+            ]
+          }),
+          require('cssnano')() // minify the result
+        ]
+      },
+      dist: {
+        src: 'dist/css/app.css',
+        dest: 'dist/css/app.min.css'
       }
     },
     watch: {
@@ -77,12 +95,12 @@ module.exports = function(grunt) {
         atBegin: true
       },
       js : {
-        files: srcFiles,
-        tasks: ['browserify']
+        files: jsFiles,
+        tasks: ['buildJs']
       },
       scss: {
         files: scssFiles,
-        tasks: ['sass', 'concat', 'cssmin']
+        tasks: ['buildCss']
       }
 
     }
@@ -92,9 +110,12 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-concat');
-  grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-browser-sync');
+  grunt.loadNpmTasks('grunt-postcss');
+  grunt.loadNpmTasks('grunt-contrib-clean');
 
-  grunt.registerTask('build', ['browserify', 'sass', 'concat', 'cssmin']);
+  grunt.registerTask('buildJs', ['browserify']);
+  grunt.registerTask('buildCss', ['clean', 'sass', 'concat', 'postcss:dist']);
+  grunt.registerTask('build', ['buildJs', 'buildCss']);
   grunt.registerTask('default', ['watch']);
 };

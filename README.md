@@ -27,6 +27,7 @@ Aprendam Bootstrap:
 ### Inicializando ambiente de desenvolvimento:
 #### executados apenas uma vez
 0. [Instale o ruby](http://dl.bintray.com/oneclick/rubyinstaller/rubyinstaller-2.2.4-x64.exe);
+0. Instale o Sass com o comando "gem install sass"
 0. [Instale o npm](https://nodejs.org/en/), que é obtido através do pacote de instalacao do node;
 0. Instale o grunt-cli (se ainda nao tiver) com o comando (a partir de qualquer diretorio) "npm install -g grunt-cli". Isso irá habilitar o grunt para ser executado a partir da linha de comando;
 0. Instale as dependencias do projeto: 
